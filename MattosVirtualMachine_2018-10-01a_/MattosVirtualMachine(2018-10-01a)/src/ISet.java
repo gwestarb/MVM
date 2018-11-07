@@ -116,16 +116,16 @@ public interface ISet {
     public static final String[]   strIret             = {"iret", "","1"};
     public static final int        _int                = 52;
     public static final String[]   strInt              = {"int ", "","2"};
-    public static final int        _moveValor_End      = 53;
+    public static final int        _moveValor_End      = 54;
     public static final String[]   strmoveValor_End    = {"move [", "]","{", "}"};
-    public static final int        _bkp                = 54;
+    public static final int        _bkp                = 55;
     public static final String[]   strBkp              = {"init ax", "","2"};
-    public static final int        _tsl                = 55;
+    public static final int        _tsl                = 56;
     public static final String[]   strTsl              = {"tsl [", "]","2"};
-    public static final int        _testTsl0           = 56;
+    public static final int        _testTsl0           = 57;
     public static final String[]   strTestTsl0         = {"testTsl0 [", "]","2"};
-    public static final int        _setTsl           = 57;
-    public static final String[]   strSetTsl         = {"testTsl0 [", "]","{","}"};
+    public static final int        _setTsl             = 58;
+    public static final String[]   strSetTsl           = {"testTsl0 [", "]","{","}"};
 
     public String[][] instructionSetStr = {
         strInitAx,
