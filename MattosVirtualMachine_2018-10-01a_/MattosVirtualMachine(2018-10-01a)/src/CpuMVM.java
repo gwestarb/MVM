@@ -470,6 +470,9 @@ public class CpuMVM implements ISet, IMVMVersion {
                 case 54:// Move [endereco],{valor}
                     _mem.m[ip + 1] = _mem.m[ip + 2];
                     break;
+                case 55:
+                    ax = 2;
+                    break;
 
                 default: {
                     repetir = false;
