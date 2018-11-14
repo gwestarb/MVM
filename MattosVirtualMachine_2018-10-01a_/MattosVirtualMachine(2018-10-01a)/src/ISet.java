@@ -119,7 +119,7 @@ public interface ISet {
     public static final int        _moveValor_End      = 54;
     public static final String[]   strmoveValor_End    = {"move [", "]","{", "}"};
     public static final int        _bkp                = 55;
-    public static final String[]   strBkp              = {"init ax", "","2"};
+    public static final String[]   strBkp              = {"bkp ax", "","2"};
     public static final int        _tsl                = 56;
     public static final String[]   strTsl              = {"tsl [", "]","2"};
     public static final int        _testTsl0           = 57;
