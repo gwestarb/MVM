@@ -471,8 +471,29 @@ public class CpuMVM implements ISet, IMVMVersion {
                     _mem.m[ip + 1] = _mem.m[ip + 2];
                     break;
                 case 55:
-                    //TALVEZ TENHA QUE SER IGUAL AO CASE 52... TEM QUE VER
-                    ax = 2;
+                    //"push ip"
+                    _mem.m[sp] = (short) (2);
+                    sp--;
+                    //"push bp"
+                    _mem.m[sp] = (short) bp;
+                    sp--;
+                    //"push ax"
+                    _mem.m[sp] = (short) ax;
+                    sp--;
+                    //"push bx"
+                    _mem.m[sp] = (short) bx;
+                    sp--;
+                    //"push cx"
+                    _mem.m[sp] = (short) cx;
+                    sp--;
+                    // vai para o inicio do tratador a partir do numero da INT
+                    ip = _mem.m[enderecoDeCarga + _mem.m[ip + 1]];
+
+                    if (_dumpPilha) {
+                        _trace.append("--->>> INT <<<---" + "\n");
+                        _trace.append(Dump.dumpPilha(_mem.m, sp, bp, sp + 10, 15) + "\n");
+                    }
+                    ip--;
                     break;
                 case 56://tsl [endereço]
                     rTSL = _mem.m[ip + 1];

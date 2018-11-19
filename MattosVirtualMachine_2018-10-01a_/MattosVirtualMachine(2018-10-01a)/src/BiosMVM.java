@@ -327,6 +327,31 @@ public class BiosMVM implements ISet {
                 _mem.m[239 + enderecoDeCarga] = 78;
                 _mem.m[254 + enderecoDeCarga] = 19;
                 break;
+            case 666:
+                _mem.m[0 + enderecoDeCarga] = ISet._initAx;
+                _mem.m[9 + enderecoDeCarga] = ISet._moveSp_Ax;
+                _mem.m[20 + enderecoDeCarga] = ISet._moveAx_End;
+                _mem.m[21 + enderecoDeCarga] = 9;
+                _mem.m[22 + enderecoDeCarga] = ISet._bkp;//bkp aqui
+                _mem.m[23 + enderecoDeCarga] = ISet._incAx;
+                _mem.m[24 + enderecoDeCarga] = ISet._moveEnd_Ax;
+                _mem.m[25 + enderecoDeCarga] = 9;
+                _mem.m[26 + enderecoDeCarga] = ISet._outAx;
+                _mem.m[27 + enderecoDeCarga] = ISet._jmp;
+                _mem.m[28 + enderecoDeCarga] = 20;
+                _mem.m[29 + enderecoDeCarga] = ISet._moveAx_End;
+                _mem.m[30 + enderecoDeCarga] = 9;
+                _mem.m[31 + enderecoDeCarga] = ISet._incAx;
+                _mem.m[32 + enderecoDeCarga] = ISet._moveEnd_Ax;
+                _mem.m[33 + enderecoDeCarga] = 9;
+                _mem.m[34 + enderecoDeCarga] = ISet._bkp;//bkp aqui
+                _mem.m[35 + enderecoDeCarga] = ISet._outAx;
+                _mem.m[36 + enderecoDeCarga] = ISet._jmp;
+                _mem.m[37 + enderecoDeCarga] = 29;
+                _mem.m[38 + enderecoDeCarga] = ISet._jmp;
+                _mem.m[39 + enderecoDeCarga] = 38;
+                _mem.m[40 + enderecoDeCarga] = ISet._halt;
+                break;
             default:
                 programa = 0;
                 break;
