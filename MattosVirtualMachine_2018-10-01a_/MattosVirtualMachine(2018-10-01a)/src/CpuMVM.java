@@ -1,12 +1,9 @@
-
-import static com.sun.org.apache.xalan.internal.lib.ExsltDatetime.date;
+ 
 import java.awt.HeadlessException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
-import java.util.concurrent.TimeUnit;
+import java.util.Date; 
 import javax.swing.JOptionPane;
 
 /*
@@ -463,16 +460,17 @@ public class CpuMVM implements ISet, IMVMVersion {
                         _trace.append(Dump.dumpPilha(_mem.m, sp, bp, sp + 10, 15) + "\n");
                     }
                     ip--;
-                    break;
-                case 53://"sub bx,ax"
-                    bx = bx - ax;
-                    break;
-                case 54:// Move [endereco],{valor}
+                    break; 
+                    
+                // --- Inicio implementação para o trabalho final ---
+                case 53:// Move [endereco],{valor}
+                    _trace.append("move [" + _mem.m[ip + 1] + "]," + _mem.m[ip + 2] + "\n");
                     _mem.m[ip + 1] = _mem.m[ip + 2];
                     break;
                 case 55:
+                    _trace.append("------ breakpoint ------");
                     //"push ip"
-                    _mem.m[sp] = (short) (2);
+                    _mem.m[sp] = (short) (ip + 2);
                     sp--;
                     //"push bp"
                     _mem.m[sp] = (short) bp;
@@ -486,8 +484,8 @@ public class CpuMVM implements ISet, IMVMVersion {
                     //"push cx"
                     _mem.m[sp] = (short) cx;
                     sp--;
-                    // vai para o inicio do tratador a partir do numero da INT
-                    ip = _mem.m[enderecoDeCarga + _mem.m[ip + 1]];
+                    // vai para o escalonador de processos
+                    ip = 19;
 
                     if (_dumpPilha) {
                         _trace.append("--->>> INT <<<---" + "\n");
@@ -496,8 +494,9 @@ public class CpuMVM implements ISet, IMVMVersion {
                     ip--;
                     break;
                 case 56://tsl [endereço]
-                    rTSL = _mem.m[ip + 1];
-                    _mem.m[ip + 1] = 1;
+                    rTSL = _mem.m[_mem.m[ip + 1] + enderecoDeCarga];
+                    _mem.m[_mem.m[ip + 1] + enderecoDeCarga] = 1;
+                    ip++;
                     break;
                 case 57://testTsl0, endereço
                     if (rTSL == 0) {
@@ -510,7 +509,7 @@ public class CpuMVM implements ISet, IMVMVersion {
                     rTSL =  _mem.m[ip + 2];
                     _mem.m[ip + 1] = (short)rTSL;
                     break;
-
+                // --- Fim implementacao para o trabalho final ---
                 default: {
                     repetir = false;
                     System.out.println("Saiu");
@@ -529,11 +528,11 @@ public class CpuMVM implements ISet, IMVMVersion {
             if (_traceExecuta) {
                 //System.out.print(Dump.traceExecuta(ax, bx, cx, bp, sp, ip, ri, _mem.m));
 
-                _trace.append(Dump.traceExecuta(ax, bx, cx, bp, sp, ip, ri, _mem.m) + "\n");
+                _trace.append(Dump.traceExecuta(ax, bx, cx, bp, sp, ip, ri, rTSL, _mem.m) + "\n");
             }
             if (_dumpRegistradores) {
                 // System.out.println(Dump.dumpRegistradores(ax, bx, cx, bp, sp, ip, ri));
-                _trace.append(Dump.dumpRegistradores(ax, bx, cx, bp, sp, ip, ri) + "\n");
+                _trace.append(Dump.dumpRegistradores(ax, bx, cx, bp, sp, ip, ri, rTSL) + "\n");
             }
             if (_dumpMemoria) {
                 //System.out.println(Dump.dumpMemoria(_mem.m, 0, 40));

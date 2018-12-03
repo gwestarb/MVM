@@ -28,10 +28,10 @@ public class Dump implements ISet {
      Funcao: dumpRegistradores
      Objetivo: apresenta o conteudo dos registradores da CPU
      */
-    public static String dumpRegistradores(int ax, int bx, int cx, int bp, int sp, int ip, int ri) {
+    public static String dumpRegistradores(int ax, int bx, int cx, int bp, int sp, int ip, int ri, int rTSL) {
         StringBuilder dump = new StringBuilder();
         dump.append(" ax:" + _f(ax) + " bx:" + _f(bx) + " cx:" + _f(cx));
-        dump.append(" ip:" + _f(ip) + " sp:" + _f(sp) + " bp:" + _f(bp) + "\n");
+        dump.append(" ip:" + _f(ip) + " sp:" + _f(sp) + " bp:" + _f(bp) + " rTSL: " + _f(rTSL) + "\n");
 
         return dump.toString();
     }
@@ -199,11 +199,11 @@ public class Dump implements ISet {
      Objetivo: apresenta o conteudo dos registradores APOS a execucao da instrucao
      */
 
-    public static String traceExecuta(int ax, int bx, int cx, int bp, int sp, int ip, int ri, short mem[]) {
+    public static String traceExecuta(int ax, int bx, int cx, int bp, int sp, int ip, int ri, int rTSL, short mem[]) {
         int espacos = 60;
         StringBuilder temp = new StringBuilder();
         temp.append("->(executa)");
-        temp.append(dumpRegistradores(ax, bx, cx, bp, sp, ip, ri));
+        temp.append(dumpRegistradores(ax, bx, cx, bp, sp, ip, ri, rTSL));
         return temp.toString();
     }
 }

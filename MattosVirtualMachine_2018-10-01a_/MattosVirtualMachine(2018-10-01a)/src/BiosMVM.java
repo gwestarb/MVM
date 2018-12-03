@@ -1,5 +1,4 @@
-
-import javax.swing.JOptionPane;
+ 
 
 /*
  * To change this template, choose Tools | Templates and open the template in
@@ -327,31 +326,216 @@ public class BiosMVM implements ISet {
                 _mem.m[239 + enderecoDeCarga] = 78;
                 _mem.m[254 + enderecoDeCarga] = 19;
                 break;
-            case 666:
-                _mem.m[0 + enderecoDeCarga] = ISet._initAx;
-                _mem.m[9 + enderecoDeCarga] = ISet._moveSp_Ax;
-                _mem.m[20 + enderecoDeCarga] = ISet._moveAx_End;
-                _mem.m[21 + enderecoDeCarga] = 9;
-                _mem.m[22 + enderecoDeCarga] = ISet._bkp;//bkp aqui
-                _mem.m[23 + enderecoDeCarga] = ISet._incAx;
-                _mem.m[24 + enderecoDeCarga] = ISet._moveEnd_Ax;
-                _mem.m[25 + enderecoDeCarga] = 9;
-                _mem.m[26 + enderecoDeCarga] = ISet._outAx;
-                _mem.m[27 + enderecoDeCarga] = ISet._jmp;
-                _mem.m[28 + enderecoDeCarga] = 20;
-                _mem.m[29 + enderecoDeCarga] = ISet._moveAx_End;
-                _mem.m[30 + enderecoDeCarga] = 9;
-                _mem.m[31 + enderecoDeCarga] = ISet._incAx;
-                _mem.m[32 + enderecoDeCarga] = ISet._moveEnd_Ax;
-                _mem.m[33 + enderecoDeCarga] = 9;
-                _mem.m[34 + enderecoDeCarga] = ISet._bkp;//bkp aqui
-                _mem.m[35 + enderecoDeCarga] = ISet._outAx;
-                _mem.m[36 + enderecoDeCarga] = ISet._jmp;
-                _mem.m[37 + enderecoDeCarga] = 29;
-                _mem.m[38 + enderecoDeCarga] = ISet._jmp;
-                _mem.m[39 + enderecoDeCarga] = 38;
-                _mem.m[40 + enderecoDeCarga] = ISet._halt;
+                
+                
+            // --- Inicio da implementacao para o trabalho final --- 
+            case 500: // Parte 1
+                _mem.m[0 + enderecoDeCarga] = 26;
+                _mem.m[1 + enderecoDeCarga] = 10;
+                _mem.m[2 + enderecoDeCarga] = 204;
+                _mem.m[3 + enderecoDeCarga] = 219;
+                _mem.m[4 + enderecoDeCarga] = 234;
+                _mem.m[5 + enderecoDeCarga] = 249;
+                _mem.m[6 + enderecoDeCarga] = 0;
+                
+                _mem.m[10 + enderecoDeCarga] = 44;	
+                _mem.m[11 + enderecoDeCarga] = 19;
+                _mem.m[12 + enderecoDeCarga] = 9;
+                _mem.m[13 + enderecoDeCarga] = 0;
+                _mem.m[14 + enderecoDeCarga] = 5;
+                _mem.m[15 + enderecoDeCarga] = 5;
+                _mem.m[16 + enderecoDeCarga] = 48;
+                _mem.m[17 + enderecoDeCarga] = 39;
+                _mem.m[18 + enderecoDeCarga] = 51;	
+                _mem.m[19 + enderecoDeCarga] = 0;	
+                _mem.m[20 + enderecoDeCarga] = 4;
+                _mem.m[21 + enderecoDeCarga] = 5;
+                _mem.m[22 + enderecoDeCarga] = 6;
+                _mem.m[23 + enderecoDeCarga] = 3;
+                _mem.m[24 + enderecoDeCarga] = 44;
+                _mem.m[25 + enderecoDeCarga] = 0;
+                _mem.m[26 + enderecoDeCarga] = 45;
+                _mem.m[27 + enderecoDeCarga] = 30;
+                _mem.m[28 + enderecoDeCarga] = 26;
+                _mem.m[29 + enderecoDeCarga] = 39;
+                _mem.m[30 + enderecoDeCarga] = 4;
+                _mem.m[31 + enderecoDeCarga] = 5;
+                _mem.m[32 + enderecoDeCarga] = 2;
+                _mem.m[33 + enderecoDeCarga] = 48;
+                _mem.m[34 + enderecoDeCarga] = 21;
+                _mem.m[35 + enderecoDeCarga] = 2;
+                _mem.m[36 + enderecoDeCarga] = 9;
+                _mem.m[37 + enderecoDeCarga] = 6;
+                _mem.m[38 + enderecoDeCarga] = 51;
+                _mem.m[39 + enderecoDeCarga] = 44;
+                _mem.m[40 + enderecoDeCarga] = 1;
+                _mem.m[41 + enderecoDeCarga] = 45;
+                _mem.m[42 + enderecoDeCarga] = 45;
+                _mem.m[43 + enderecoDeCarga] = 26;
+                _mem.m[44 + enderecoDeCarga] = 54;
+                _mem.m[45 + enderecoDeCarga] = 4;
+                _mem.m[46 + enderecoDeCarga] = 5;
+                _mem.m[47 + enderecoDeCarga] = 3;
+                _mem.m[48 + enderecoDeCarga] = 48;
+                _mem.m[49 + enderecoDeCarga] = 21;
+                _mem.m[50 + enderecoDeCarga] = 2;	
+                _mem.m[51 + enderecoDeCarga] = 9;	
+                _mem.m[52 + enderecoDeCarga] = 6;	
+                _mem.m[53 + enderecoDeCarga] = 51;	
+                _mem.m[54 + enderecoDeCarga] = 0;	
+                _mem.m[55 + enderecoDeCarga] = 9;	
+                _mem.m[56 + enderecoDeCarga] = 6;	
+                _mem.m[57 + enderecoDeCarga] = 5;	
+                _mem.m[58 + enderecoDeCarga] = 4;
+                _mem.m[59 + enderecoDeCarga] = 48;
+                _mem.m[60 + enderecoDeCarga] = 51;	 
+                
+                _mem.m[70 + enderecoDeCarga] = ISet._moveAx_End;	
+                _mem.m[71 + enderecoDeCarga] = 9;
+                _mem.m[72 + enderecoDeCarga] = ISet._bkp;
+                _mem.m[73 + enderecoDeCarga] = ISet._incAx;
+                _mem.m[74 + enderecoDeCarga] = ISet._moveEnd_Ax;
+                _mem.m[75 + enderecoDeCarga] = 9;	  
+                _mem.m[76 + enderecoDeCarga] = ISet._outAx;	
+                _mem.m[77 + enderecoDeCarga] = ISet._jmp;	
+                _mem.m[78 + enderecoDeCarga] = 70;	
+                
+                _mem.m[90 + enderecoDeCarga] = ISet._moveAx_End;	
+                _mem.m[91 + enderecoDeCarga] = 9;
+                _mem.m[92 + enderecoDeCarga] = ISet._incAx;
+                _mem.m[93 + enderecoDeCarga] = ISet._moveEnd_Ax;
+                _mem.m[94 + enderecoDeCarga] = 9;	  
+                _mem.m[95 + enderecoDeCarga] = ISet._outAx;	
+                _mem.m[96 + enderecoDeCarga] = ISet._bkp;	
+                _mem.m[97 + enderecoDeCarga] = ISet._jmp;	
+                _mem.m[98 + enderecoDeCarga] = 90;	
+                
+                _mem.m[110 + enderecoDeCarga] = ISet._jmp;	
+                _mem.m[111 + enderecoDeCarga] = 110;
+                 
+                _mem.m[209 + enderecoDeCarga] = 70;
+                _mem.m[224 + enderecoDeCarga] = 90;
+                _mem.m[239 + enderecoDeCarga] = 73;
+                _mem.m[254 + enderecoDeCarga] = 19;
+                
+                break; 
+            
+            case 501:  // Parte 2
+                
+                _mem.m[0 + enderecoDeCarga] = 26;
+                _mem.m[1 + enderecoDeCarga] = 10;
+                
+                _mem.m[2 + enderecoDeCarga] = 204;
+                _mem.m[3 + enderecoDeCarga] = 219;
+                _mem.m[4 + enderecoDeCarga] = 234;
+                _mem.m[5 + enderecoDeCarga] = 249;
+                _mem.m[6 + enderecoDeCarga] = 0;
+                
+                _mem.m[10 + enderecoDeCarga] = 44;	
+                _mem.m[11 + enderecoDeCarga] = 19;
+                _mem.m[12 + enderecoDeCarga] = 9;
+                _mem.m[13 + enderecoDeCarga] = 0;
+                _mem.m[14 + enderecoDeCarga] = 5;
+                _mem.m[15 + enderecoDeCarga] = 5;
+                _mem.m[16 + enderecoDeCarga] = 48;
+                _mem.m[17 + enderecoDeCarga] = 39;
+                _mem.m[18 + enderecoDeCarga] = 51;	
+                _mem.m[19 + enderecoDeCarga] = 0;	
+                _mem.m[20 + enderecoDeCarga] = 4;
+                _mem.m[21 + enderecoDeCarga] = 5;
+                _mem.m[22 + enderecoDeCarga] = 6;
+                _mem.m[23 + enderecoDeCarga] = 3;
+                _mem.m[24 + enderecoDeCarga] = 44;
+                _mem.m[25 + enderecoDeCarga] = 0;
+                _mem.m[26 + enderecoDeCarga] = 45;
+                _mem.m[27 + enderecoDeCarga] = 30;
+                _mem.m[28 + enderecoDeCarga] = 26;
+                _mem.m[29 + enderecoDeCarga] = 39;
+                _mem.m[30 + enderecoDeCarga] = 4;
+                _mem.m[31 + enderecoDeCarga] = 5;  
+                _mem.m[32 + enderecoDeCarga] = 2;
+                _mem.m[33 + enderecoDeCarga] = 48;
+                _mem.m[34 + enderecoDeCarga] = 21;
+                _mem.m[35 + enderecoDeCarga] = 2;
+                _mem.m[36 + enderecoDeCarga] = 9;
+                _mem.m[37 + enderecoDeCarga] = 6;
+                _mem.m[38 + enderecoDeCarga] = 51;
+                _mem.m[39 + enderecoDeCarga] = 44;
+                _mem.m[40 + enderecoDeCarga] = 1;
+                _mem.m[41 + enderecoDeCarga] = 45;
+                _mem.m[42 + enderecoDeCarga] = 45;
+                _mem.m[43 + enderecoDeCarga] = 26;
+                _mem.m[44 + enderecoDeCarga] = 54;
+                _mem.m[45 + enderecoDeCarga] = 4;
+                _mem.m[46 + enderecoDeCarga] = 5;
+                _mem.m[47 + enderecoDeCarga] = 3;
+                _mem.m[48 + enderecoDeCarga] = 48;
+                _mem.m[49 + enderecoDeCarga] = 21;
+                _mem.m[50 + enderecoDeCarga] = 2;	
+                _mem.m[51 + enderecoDeCarga] = 9;	
+                _mem.m[52 + enderecoDeCarga] = 6;	
+                _mem.m[53 + enderecoDeCarga] = 51;	
+                _mem.m[54 + enderecoDeCarga] = 0;	
+                _mem.m[55 + enderecoDeCarga] = 9;	
+                _mem.m[56 + enderecoDeCarga] = 6;	
+                _mem.m[57 + enderecoDeCarga] = 5;	
+                _mem.m[58 + enderecoDeCarga] = 4;
+                _mem.m[59 + enderecoDeCarga] = 48;
+                _mem.m[60 + enderecoDeCarga] = 51;	 
+                
+                //Processo 1
+                _mem.m[70 + enderecoDeCarga] = ISet._tsl;       // Move o valor da posicao 150 para o registrador TSL 
+                _mem.m[71 + enderecoDeCarga] = 150;             // Move 1 para a posicao 150
+                _mem.m[72 + enderecoDeCarga] = ISet._testTsl0;  // Verifica se o registrador rTSL esta com 0
+                _mem.m[73 + enderecoDeCarga] = 76;              // Caso rTLS seja zero, vai para 76 (Regiao critica) 
+                _mem.m[74 + enderecoDeCarga] = ISet._jmp;       // Caso nao contenha zero, faz loop até acontecer unlock
+                _mem.m[75 + enderecoDeCarga] = 70;
+                
+                //Regiao critica
+                _mem.m[76 + enderecoDeCarga] = ISet._moveAx_End;	
+                _mem.m[77 + enderecoDeCarga] = 9;
+                _mem.m[78 + enderecoDeCarga] = ISet._bkp;       // Chamado do escalonador de processos para ir para o processo 2
+                _mem.m[79 + enderecoDeCarga] = ISet._incAx;     // e verificar se o race condition foi resolvido
+                _mem.m[80 + enderecoDeCarga] = ISet._moveEnd_Ax;
+                _mem.m[81 + enderecoDeCarga] = 9;	  
+                _mem.m[82 + enderecoDeCarga] = ISet._outAx;	
+                _mem.m[83 + enderecoDeCarga] = ISet._jmp;	
+                _mem.m[84 + enderecoDeCarga] = 76;	 
+                
+                //Processo 2
+                _mem.m[90 + enderecoDeCarga] = ISet._tsl;       // Move o valor da posição 150 para o registrador TSL 
+                _mem.m[91 + enderecoDeCarga] = 150;             // Move 1 para a posicao 150
+                _mem.m[92 + enderecoDeCarga] = ISet._testTsl0;  // Verifica se o registrador rTSL esta com 0
+                _mem.m[93 + enderecoDeCarga] = 97;              // Caso rTLS seja zero, vai para 97 (Regiao critica)
+                _mem.m[94 + enderecoDeCarga] = ISet._bkp;       // e volta para o outro processo	
+                _mem.m[95 + enderecoDeCarga] = ISet._jmp;       // Caso nao contenha zero, faz loop até acontecer unlock
+                _mem.m[96 + enderecoDeCarga] = 90;
+                
+                //Regiao critica
+                _mem.m[97 + enderecoDeCarga] = ISet._moveAx_End;	
+                _mem.m[98 + enderecoDeCarga] = 9;
+                _mem.m[99 + enderecoDeCarga] = ISet._incAx;
+                _mem.m[100 + enderecoDeCarga] = ISet._moveEnd_Ax;
+                _mem.m[101 + enderecoDeCarga] = 9;	  
+                _mem.m[102 + enderecoDeCarga] = ISet._outAx;	
+                _mem.m[103 + enderecoDeCarga] = ISet._jmp;	
+                _mem.m[104 + enderecoDeCarga] = 97;	
+                
+                
+                _mem.m[110 + enderecoDeCarga] = ISet._jmp;	
+                _mem.m[111 + enderecoDeCarga] = 110;
+                
+                _mem.m[150 + enderecoDeCarga] = 0;
+                
+                _mem.m[209 + enderecoDeCarga] = 70;
+                _mem.m[224 + enderecoDeCarga] = 90;
+                _mem.m[239 + enderecoDeCarga] = 79;
+                _mem.m[254 + enderecoDeCarga] = 19;
+                
                 break;
+            
+            // Fim da implementacao para o trabalho final
+                
             default:
                 programa = 0;
                 break;

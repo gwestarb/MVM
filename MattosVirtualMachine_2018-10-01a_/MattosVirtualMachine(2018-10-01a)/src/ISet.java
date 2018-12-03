@@ -116,17 +116,22 @@ public interface ISet {
     public static final String[]   strIret             = {"iret", "","1"};
     public static final int        _int                = 52;
     public static final String[]   strInt              = {"int ", "","2"};
-    public static final int        _moveValor_End      = 54;
+    
+    
+    // Instruções adicionadas para o trabalho final
+    public static final int        _moveValor_End      = 53;
     public static final String[]   strmoveValor_End    = {"move [", "]","{", "}"};
-    public static final int        _bkp                = 55;
+    public static final int        _bkp                = 54;
     public static final String[]   strBkp              = {"bkp ax", "","2"};
-    public static final int        _tsl                = 56;
+    public static final int        _tsl                = 55;
     public static final String[]   strTsl              = {"tsl [", "]","2"};
-    public static final int        _testTsl0           = 57;
+    public static final int        _testTsl0           = 56;
     public static final String[]   strTestTsl0         = {"testTsl0 [", "]","2"};
-    public static final int        _setTsl             = 58;
-    public static final String[]   strSetTsl           = {"testTsl0 [", "]","{","}"};
+    public static final int        _setTsl             = 57;
+    public static final String[]   strSetTsl           = {"setTsl [],{", "}","3"};  
 
+
+    
     public String[][] instructionSetStr = {
         strInitAx,
         strMoveAx_Bx, strMoveAx_Cx, strMoveBx_Ax, strMoveCx_Ax, strMoveAx_End, strMoveAx_EndBxP,
@@ -147,7 +152,5 @@ public interface ISet {
         _halt,_decSp,_moveEndBpM_Ax,_moveEndBpP_Ax,_moveAx_Valor,_testAxEqBx,_incSp,
         _moveAx_Sp,_moveSp_Ax,_moveAx_Bp,_moveBp_Ax,_iret,_int, _moveValor_End, _bkp,
         _tsl, _testTsl0, _setTsl};
-
-
     
 }
